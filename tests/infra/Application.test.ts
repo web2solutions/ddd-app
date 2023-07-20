@@ -5,13 +5,15 @@ import {
 import {
   EApplictionProcessType,
   EhttpFrameworkType,
+  IApplication,
+  IApplicationConfig,
 } from '../../src/infra/application/index';
 
 describe('application unit test', () => {
   it('test constructor - application public properties - memory db adapter', () => {
     expect.hasAssertions();
     const instanceId = `${Math.random()}`;
-    const application = new Application({
+    const config: IApplicationConfig = {
       name: 'Payment System',
       instanceId,
       processType: EApplictionProcessType.ondemand,
@@ -21,7 +23,8 @@ describe('application unit test', () => {
         network: 'HTTP',
       },
       domains: ['Payments'],
-    });
+    };
+    const application: IApplication = new Application(config);
 
     expect(application.status).toStrictEqual('active');
     expect(application.name).toStrictEqual('Payment System');
@@ -31,7 +34,7 @@ describe('application unit test', () => {
   it('test constructor - application public properties - mongooose db adapter', () => {
     expect.hasAssertions();
     const instanceId = `${Math.random()}`;
-    const application = new Application({
+    const application: IApplication = new Application({
       name: 'Payment System',
       instanceId,
       processType: EApplictionProcessType.ondemand,
@@ -51,7 +54,7 @@ describe('application unit test', () => {
   it('should properly start with inMemory database', async () => {
     expect.hasAssertions();
     const instanceId = `${Math.random()}`;
-    const application = new Application({
+    const application: IApplication = new Application({
       name: 'Payment System',
       instanceId,
       processType: EApplictionProcessType.ondemand,
@@ -73,7 +76,7 @@ describe('application unit test', () => {
   it('should properly start with mongoose database', async () => {
     expect.hasAssertions();
     const instanceId = `${Math.random()}`;
-    const application = new Application({
+    const application: IApplication = new Application({
       name: 'Payment System',
       instanceId,
       processType: EApplictionProcessType.ondemand,
@@ -94,7 +97,7 @@ describe('application unit test', () => {
 
   it('inMemory dbClient must provide the Payments store', async () => {
     expect.hasAssertions();
-    const application = new Application({
+    const application: IApplication = new Application({
       name: 'Payment System',
       instanceId: `${Math.random()}`,
       processType: EApplictionProcessType.ondemand,
@@ -113,7 +116,7 @@ describe('application unit test', () => {
 
   it('mongoose dbClient must provide the Payments store', async () => {
     expect.hasAssertions();
-    const application = new Application({
+    const application: IApplication = new Application({
       name: 'Payment System',
       instanceId: `${Math.random()}`,
       processType: EApplictionProcessType.ondemand,
@@ -132,7 +135,7 @@ describe('application unit test', () => {
 
   it('application must properly stop - memory', async () => {
     expect.hasAssertions();
-    const application = new Application({
+    const application: IApplication = new Application({
       name: 'Payment System',
       instanceId: `${Math.random()}`,
       processType: EApplictionProcessType.ondemand,
@@ -155,7 +158,7 @@ describe('application unit test', () => {
 
   it('application must properly stop - mongoose', async () => {
     expect.hasAssertions();
-    const application = new Application({
+    const application: IApplication = new Application({
       name: 'Payment System',
       instanceId: `${Math.random()}`,
       processType: EApplictionProcessType.ondemand,
