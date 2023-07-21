@@ -1,4 +1,4 @@
-FROM node:16.20.1
+FROM node:20.4
 # FROM public.ecr.aws/lambda/nodejs:16.2023.06.28.12
 
 RUN mkdir -p /usr/src/app
