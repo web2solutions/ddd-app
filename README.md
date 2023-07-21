@@ -18,5 +18,7 @@ REST API through:
 | **Code Coverage**               | [![codecov](https://codecov.io/gh/web2solutions/ddd-app/branch/main/graph/badge.svg?token=FIQF8KPQ64)](https://codecov.io/gh/web2solutions/ddd-app) |
 | **Security scanner**     | ![Known Vulnerabilities](https://snyk.io/test/github/web2solutions/ddd-app/badge.svg)                                         |
 
+`Coverage - unit testing`
+
  [![codecov](https://codecov.io/gh/web2solutions/ddd-app/branch/main/graphs/tree.svg?token=FIQF8KPQ64)](https://codecov.io/gh/web2solutions/ddd-app)
 
