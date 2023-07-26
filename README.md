@@ -3,14 +3,29 @@
 
 ***In Progress***
 
-Domain Driven, Framework Agnostic, REST API boilerplate made with Typescript.
+Domain driven designed, Application Framework Agnostic, REST API boilerplate made with Typescript.
 
 Easily switch the environment where your app runs.
 
-REST API through:
+`Agnostic Application framework`
+
+Implemented application `ports`:
 
 - AWS lambda
 - Express.js
+
+`Database agnostic`
+
+Implemented Database `adapters`:
+
+- In Memory
+- Mongoose
+
+Easily runs in the following environments:
+
+- AWS Lambda
+- AWS ECS
+- AWS EC2
 
 | Status                                  |                                                               |
 | ------------------------------------- | ----------------------------------------------------------------------- |
