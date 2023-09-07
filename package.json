@@ -52,7 +52,7 @@
     "kafkajs": "^2.2.4",
     "mock-aws-s3": "^4.0.2",
     "mongoose": "^7.5.0",
-    "nock": "^13.3.2",
+    "nock": "^13.3.3",
     "npm": "^9.8.1",
     "redis": "^4.6.7",
     "source-map-support": "^0.5.21",
